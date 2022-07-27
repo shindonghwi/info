@@ -10,7 +10,7 @@
     "web": "expo start --web",
     "build-react": "webpack --mode production",
     "start-react": "webpack serve --config ./webpack.config.js --mode development",
-    "dev-start": "npm run ios && npm run rnandroid && npm run start-react"
+    "dev-start": "npm run ios & npm run rnandroid & npm run start-react"
   },
   "dependencies": {
     "clean-webpack-plugin": "^4.0.0",

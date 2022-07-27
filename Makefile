@@ -8,4 +8,8 @@ all-clean:
 		make ios-clean
 		make android-clean
 
-.PHONY: ios-clean andorid-clean all-clean
+all-rebuild:
+		make all-clean
+		npm run dev-start
+
+.PHONY: ios-clean andorid-clean all-clean all-rebuild

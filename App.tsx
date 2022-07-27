@@ -5,7 +5,7 @@ import TextItem from "./components/TextItem";
 export default function App() {
   return (
     <View style={styles.container}>
-      <TextItem text="Hello world from React Naitve Web2" />
+      <TextItem text="Hello SDH1" />
     </View>
   );
 }
