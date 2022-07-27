@@ -1,6 +1,7 @@
 const path = require("path");
 const HTMLWebpackPlugin = require("html-webpack-plugin");
 const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 const HTMLWebpackPluginConfig = new HTMLWebpackPlugin({
   template: path.resolve(__dirname, "./public/index.html"),
@@ -37,7 +38,13 @@ module.exports = {
       },
     ],
   },
-  plugins: [HTMLWebpackPluginConfig, new ForkTsCheckerWebpackPlugin()],
+  plugins: [
+    HTMLWebpackPluginConfig,
+    new ForkTsCheckerWebpackPlugin(),
+    new CleanWebpackPlugin({
+      cleanAfterEveryBuildPatterns: ["dist"],
+    }),
+  ],
   devServer: {
     static: {
       directory: path.join(__dirname, "public"),
