@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "shindonghwi_info",
+    "slug": "shindonghwi_info",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "shindonghwi_info"
+}
