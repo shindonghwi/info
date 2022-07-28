@@ -36,6 +36,13 @@ module.exports = {
           },
         },
       },
+      {
+        test: /\.(t|j)sx?$/,
+        exclude: /node_modules\/(?!()\/).*/,
+        use: {
+          loader: "babel-loader",
+        },
+      },
     ],
   },
   plugins: [
@@ -57,16 +64,5 @@ module.exports = {
     alias: {
       "react-native$": "react-native-web",
     },
-  },
-  module: {
-    rules: [
-      {
-        test: /\.(t|j)sx?$/,
-        exclude: /node_modules\/(?!()\/).*/,
-        use: {
-          loader: "babel-loader",
-        },
-      },
-    ],
   },
 };
